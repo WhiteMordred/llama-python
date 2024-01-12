@@ -1,10 +1,6 @@
 update:
 	poetry install
 	git submodule update --init --recursive
-
-update.vendor:
-	cd vendor/llama.cpp && git pull origin master
-
 deps:
 	python3 -m pip install --upgrade pip
 	python3 -m pip install -e ".[all]"
